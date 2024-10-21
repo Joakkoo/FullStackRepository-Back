@@ -19,7 +19,7 @@ app.use("/api/tasks", taskRoutes);  // Prefijo para las rutas de tareas
 
 // Ruta base para verificar que el backend esté corriendo
 app.get("/", (req, res) => {
-    res.send("Backend is running");
+    res.send("El backend funciona correctamente");
 });
 
 app.all("*", (req, res, next) => {
