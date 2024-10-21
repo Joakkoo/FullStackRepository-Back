@@ -15,6 +15,10 @@ dotenv.config();
 
 const PORT = process.env.PORT || 4002;
 
+app.get("/", (req, res) => {
+    res.send("Backend is running");
+});
+
 app.get("/tasks", async (req, res) => {
     try {
         const tasks = await Task.find();
