@@ -13,7 +13,7 @@ connectDB();
 
 dotenv.config();
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 4002;
 
 app.get("/tasks", async (req, res) => {
     try {
