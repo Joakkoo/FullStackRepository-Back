@@ -3,7 +3,7 @@ import Task from "../models/task.js";
 // Obtener todas las tareas con paginación
 export const getTasks = async (req, res) => {
     try {
-        let perPage = req.query.perPage ? parseInt(req.query.perPage) : 10;
+        let perPage = req.query.perPage ? parseInt(req.query.perPage) : 5;
         let page = req.query.page ? Math.max(0, parseInt(req.query.page)) : 0;
         let filter = req.query.filter ? JSON.parse(req.query.filter) : {};
         let sort = req.query.sort ? JSON.parse(req.query.sort) : {};
